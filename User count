@@ -1,0 +1,15 @@
+user_count = {}
+
+    for name in names:
+        if name in user_count:
+            user_count[name] += 1
+        else:
+            user_count[name] = 1
+
+    return user_count
+
+if __name__ == "__main__":
+    user_names = ["Alice", "Bob", "Alice", "Charlie", "Alice", "Bob", "Alice", "David"]
+    user_count = count_users(user_names)
+    for name, count in user_count.items():
+        print(f"{name}: {count}")
